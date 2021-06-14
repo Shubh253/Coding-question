@@ -23,20 +23,13 @@ class Result {
 
     public static int sockMerchant(int n, List<Integer> ar) {
         int count = 0;
+        Collections.sort(ar);
         for(int i=0;i<n-1;i++){
-            if(ar.get(i)!=0){
-            for(int j=i+1;j<n-1;j++){
-                if(ar.get(i)==ar.get(j)){
-                    count++;
-                    ar.set(j,0);
-                    break;
-                
-                }
-            
-            
+            if(ar.get(i)==ar.get(i+1)){
+                count++;
+                i++;
             }
-    }
-
+          
     }
     return count;
 }
@@ -62,3 +55,4 @@ public class Solution {
         bufferedWriter.close();
     }
 }
+
