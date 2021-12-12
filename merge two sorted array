@@ -1,0 +1,9 @@
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        
+        for num in range(0,len(nums2)):
+            nums1.append(nums2[num])
+        nums1.sort()
+        for i in range(0,len(nums2)):
+            nums1.remove(0)
+            
